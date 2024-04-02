@@ -1,0 +1,45 @@
+{
+    "type": "prod",
+    "name": "root",
+    "parts": [
+        {
+            "type": "dag",
+            "name": "valuation",
+            "label": "valuation function type",
+            "values": [
+                {"name": "general"},
+                {
+                    "name": "add",
+                    "label": "additive",
+                    "text": "A function $v$ is additive iff for any disjoint sets $S$ and $T$, we have $v(S ∪ T) = v(S) + v(T)$."
+                },
+                {
+                    "name": "subadd",
+                    "label": "sub-additive",
+                    "text": "A function $v$ is sub-additive iff for any disjoint sets $S$ and $T$, we have $v(S ∪ T) ≤ v(S) + v(T)$."
+                },
+                {
+                    "name": "superadd",
+                    "label": "super-additive",
+                    "text": "A function $v$ is super-additive iff for any disjoint sets $S$ and $T$, we have $v(S ∪ T) ≥ v(S) + v(T)$."
+                }
+            ],
+            "containments": [
+                ["general", "subadd"],
+                ["general", "superadd"],
+                ["subadd", "add"],
+                ["superadd", "add"]
+            ]
+        },
+        {
+            "type": "bool",
+            "name": "identical",
+            "label": "identical valuations"
+        },
+        {
+            "type": "bool",
+            "name": "twoAg",
+            "label": "only 2 agents"
+        }
+    ]
+}
