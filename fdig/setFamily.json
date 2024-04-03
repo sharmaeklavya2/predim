@@ -6,6 +6,7 @@
             "type": "dag",
             "name": "valuation",
             "label": "valuation function type",
+            "default": "general",
             "values": [
                 {"name": "general"},
                 {
